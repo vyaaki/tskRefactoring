@@ -2,6 +2,7 @@
 
 namespace App\Command;
 
+use App\Helper\CommissionCalculatorHelper;
 use App\Model\Transaction;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -18,33 +19,38 @@ use Symfony\Component\Serializer\SerializerInterface;
 
 class CommissionCalculatorCommand extends Command
 {
-    const EUR_CURRENCY_CODE = 'EUR';
     protected static $defaultName = 'task:commission:calculate';
     /**
      * @var Serializer
      */
     private $serializer;
 
+//    /**
+//     * @var ParameterBagInterface
+//     */
+//    private $parameters;
     /**
-     * @var ParameterBagInterface
+     * @var CommissionCalculatorHelper
      */
-    private $parameters;
+    private $commissionCalculatorHelper;
 
     /**
      * CommissionCalculatorCommand constructor.
-     * @param ParameterBagInterface $parameterBag
+     * @param CommissionCalculatorHelper $commissionCalculatorHelper
      * @param string|null $name
      */
-    public function __construct(ParameterBagInterface $parameterBag ,string $name = null)
+    public function __construct(CommissionCalculatorHelper $commissionCalculatorHelper,string $name = null)
     {
 
-        $this->parameters = $parameterBag;
+        $this->commissionCalculatorHelper = $commissionCalculatorHelper;
+//        $this->parameters = $parameterBag;
+
         $encoders = [new JsonEncoder()];
         $normalizers = [new ObjectNormalizer()];
 
-        $serializer = new Serializer($normalizers, $encoders);
+        $this->serializer = new Serializer($normalizers, $encoders);
         parent::__construct($name);
-        $this->serializer = $serializer;
+
     }
 
     protected function configure()
@@ -63,7 +69,7 @@ class CommissionCalculatorCommand extends Command
             $io->note(sprintf('File found: %s', $arg1));
             $transactions = file($arg1);
 
-            $ratesData = $this->serializer->decode(file_get_contents($this->parameters->get('app.rates_data_url')), 'json');
+            $ratesData = $this->commissionCalculatorHelper->getDecodedRates();
             if(is_array($ratesData) && array_key_exists('rates' , $ratesData)){
                 $ratesList = $ratesData['rates'];
                 $io->note("List of rates is ready");
@@ -74,25 +80,9 @@ class CommissionCalculatorCommand extends Command
             }
             foreach ($transactions as $transactionRow) {
                 /** @var Transaction $transaction */
-                $transaction = $this->serializer->deserialize($transactionRow, Transaction::class, 'json');
 
-                $bin = $this->serializer->decode(file_get_contents($this->parameters->get('app.bin_data_url') . $transaction->getBin()), 'json');
-                $isEu = $this->isEu($bin['country']['alpha2']);
-                $transactionCurrency = $transaction->getCurrency();
-                if(array_key_exists($transactionCurrency,$ratesList)){
-                    $rate= $ratesList[$transactionCurrency];
-                }
-                else{
-                    $rate = 0;
-                    $io->note(sprintf("Can't find rate for BIN: %s", $transaction->getBin()));
-                }
-                if ($transactionCurrency == $this::EUR_CURRENCY_CODE or $rate == 0.00) {
-                    $amountFixed = $transaction->getAmount();
-                }
-                if ($transactionCurrency != $this::EUR_CURRENCY_CODE or $rate > 0.00) {
-                    $amountFixed = $transaction->getAmount() / $rate;
-                }
-                $io->comment(sprintf("Commission for BIN %s: %s", $transaction->getBin() , $this->ceiling(($amountFixed * ($isEu ? 0.01 : 0.02)))));
+                $calculatedValue = $this->commissionCalculatorHelper->calculateCommission($transactionRow, $ratesList);
+                $io->comment(sprintf("Commission: %s", $calculatedValue));
             }
             $io->success('Successfully calculated');
             return Command::SUCCESS;
@@ -101,50 +91,5 @@ class CommissionCalculatorCommand extends Command
             return Command::FAILURE;
         }
 
-    }
-
-
-    private function isEu($countryCode) {
-        $result = false;
-        switch($countryCode) {
-            case 'AT':
-            case 'BE':
-            case 'BG':
-            case 'CY':
-            case 'CZ':
-            case 'DE':
-            case 'DK':
-            case 'EE':
-            case 'ES':
-            case 'FI':
-            case 'FR':
-            case 'GR':
-            case 'HR':
-            case 'HU':
-            case 'IE':
-            case 'IT':
-            case 'LT':
-            case 'LU':
-            case 'LV':
-            case 'MT':
-            case 'NL':
-            case 'PO':
-            case 'PT':
-            case 'RO':
-            case 'SE':
-            case 'SI':
-            case 'SK':
-                $result = true;
-        }
-        return $result;
-    }
-
-    /**
-     * @param $value
-     * @return float|int
-     */
-    private function ceiling($value)
-    {
-        return ceil($value * 100) / 100;
     }
 }

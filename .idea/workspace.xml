@@ -1,41 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb1cec66-9fef-469c-9d56-d77831acc7f9" name="Default Changelist" comment="init">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/tskRefactoring.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/console" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/cache.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/prod/routing.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/routing.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/framework.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/preload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/dev/framework.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.preload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+    <list default="true" id="cb1cec66-9fef-469c-9d56-d77831acc7f9" name="Default Changelist" comment="add symfony/serializer package">
+      <change afterPath="$PROJECT_DIR$/src/Helper/CommissionCalculatorHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/CommissionCalculatorTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/tskRefactoring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tskRefactoring.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/CommissionCalculatorCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/CommissionCalculatorCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Transaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Transaction.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -54,6 +34,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
@@ -92,6 +73,11 @@
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector_compare" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
     </include_path>
   </component>
   <component name="ProjectId" id="1iGnI4U66TBvgTI3qzyr0Ef6Amf" />
@@ -109,6 +95,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work\projects\tskRefactoring\config" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -117,8 +108,38 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601542712253</updated>
-      <workItem from="1601542713360" duration="732000" />
+      <workItem from="1601542713360" duration="18372000" />
+      <workItem from="1601568178189" duration="6357000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1601543461276</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601543461276</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add symfony/serializer package">
+      <created>1601545500679</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601545500679</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add commission calculating command.">
+      <created>1601557987415</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601557987415</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add UnitTests package">
+      <created>1601559812029</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601559812029</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,20 +147,59 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="add symfony/serializer package" />
+    <MESSAGE value="add commission calculating command." />
+    <MESSAGE value="add UnitTests package" />
+    <option name="LAST_COMMIT_MESSAGE" value="add UnitTests package" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1090" y="579" key="#Composer" timestamp="1601542734332">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1090" y="579" key="#Composer/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601542734332" />
-    <state x="905" y="268" width="749" height="1058" key="CommitChangelistDialog2" timestamp="1601543400523">
+    <state x="734" y="355" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601572815647">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="905" y="268" width="749" height="1058" key="CommitChangelistDialog2/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601543400523" />
+    <state x="734" y="355" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601572815647" />
+    <state x="829" y="139" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601543734262">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="829" y="139" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601543734262" />
+    <state x="1010" y="455" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601573110611">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1010" y="455" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601573110611" />
+    <state x="1099" y="473" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1601560471784">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1099" y="473" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601560471784" />
+    <state x="1099" y="390" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1" timestamp="1601560539338">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1099" y="390" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601560539338" />
+    <state x="905" y="268" width="749" height="1058" key="CommitChangelistDialog2" timestamp="1601559811392">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="905" y="268" width="749" height="1058" key="CommitChangelistDialog2/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601559811392" />
     <state x="1060" y="441" key="FileChooserDialogImpl" timestamp="1601543234721">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1060" y="441" key="FileChooserDialogImpl/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601543234721" />
+    <state x="1065" y="423" key="NewPhpClassDialog" timestamp="1601572978801">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1065" y="423" key="NewPhpClassDialog/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601572978801" />
+    <state x="1082" y="402" key="RollbackChangesDialog" timestamp="1601571432182">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1082" y="402" key="RollbackChangesDialog/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601571432182" />
+    <state x="936" y="330" key="run.anything.popup" timestamp="1601560987539">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="936" y="330" key="run.anything.popup/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601560987539" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1601573362397">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601573362397" />
   </component>
 </project>

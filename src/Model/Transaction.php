@@ -12,7 +12,7 @@ class Transaction
      */
     private $bin;
     /**
-     * @var int
+     * @var float
      */
     private $amount;
     /**
@@ -37,17 +37,17 @@ class Transaction
     }
 
     /**
-     * @return int
+     * @return float
      */
-    public function getAmount() : int
+    public function getAmount() : float
     {
         return $this->amount;
     }
 
     /**
-     * @param int $amount
+     * @param float $amount
      */
-    public function setAmount(int $amount): void
+    public function setAmount(float $amount): void
     {
         $this->amount = $amount;
     }
