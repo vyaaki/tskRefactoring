@@ -1,0 +1,3 @@
+parameters:
+  app.bin_data_url: 'https://lookup.binlist.net/'
+  app.rates_data_url: 'https://api.exchangeratesapi.io/latest'
