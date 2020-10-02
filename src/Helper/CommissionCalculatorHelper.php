@@ -5,6 +5,7 @@ namespace App\Helper;
 
 
 use App\Model\Transaction;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
@@ -17,8 +18,12 @@ class CommissionCalculatorHelper
      * @var Serializer
      */
     private $serializer;
+    /**
+     * @var ParameterBagInterface
+     */
+    private $dataReceiver;
 
-    public function __construct()
+    public function __construct(DataReceiverHelper $dataReceiverHelper)
     {
 
         $encoders = [new JsonEncoder()];
@@ -26,6 +31,7 @@ class CommissionCalculatorHelper
 
         $serializer = new Serializer($normalizers, $encoders);
         $this->serializer = $serializer;
+        $this->dataReceiver = $dataReceiverHelper;
     }
 
     /**
@@ -37,8 +43,8 @@ class CommissionCalculatorHelper
     {
 
         $transaction = $this->serializer->deserialize($transactionRow, Transaction::class, 'json');
-        $bin = $this->getDecodedBIN($transaction);
-        $isEu = $this->isEu($bin['country']['alpha2']);
+        $binCountry = $this->dataReceiver->getDecodedBINCountry($transaction);
+        $isEu = $this->isEu($binCountry);
         $transactionCurrency = $transaction->getCurrency();
         if (array_key_exists($transactionCurrency, $ratesList)) {
             $rate = $ratesList[$transactionCurrency];
@@ -56,22 +62,6 @@ class CommissionCalculatorHelper
     }
 
 
-    /**
-     * @param Transaction $transaction
-     * @return array
-     */
-    private function getDecodedBIN(Transaction $transaction): array
-    {
-        return $this->serializer->decode(file_get_contents('https://lookup.binlist.net/' . $transaction->getBin()), 'json');
-    }
-
-    /**
-     * @return array
-     */
-    public function getDecodedRates(): array
-    {
-        return $this->serializer->decode(file_get_contents('https://api.exchangeratesapi.io/latest'), 'json');
-    }
 
 
     private function isEu($countryCode) {

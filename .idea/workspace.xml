@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb1cec66-9fef-469c-9d56-d77831acc7f9" name="Default Changelist" comment="add symfony/serializer package">
-      <change afterPath="$PROJECT_DIR$/src/Helper/CommissionCalculatorHelper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/CommissionCalculatorTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tskRefactoring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tskRefactoring.iml" afterDir="false" />
+    <list default="true" id="cb1cec66-9fef-469c-9d56-d77831acc7f9" name="Default Changelist" comment="move calculator logic to helper. Add Unit-test.">
+      <change afterPath="$PROJECT_DIR$/src/Helper/DataReceiverHelper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Command/CommissionCalculatorCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/CommissionCalculatorCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Transaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Transaction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Helper/CommissionCalculatorHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/CommissionCalculatorHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/CommissionCalculatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CommissionCalculatorTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +125,8 @@
       <option name="presentableId" value="Default" />
       <updated>1601542712253</updated>
       <workItem from="1601542713360" duration="18372000" />
-      <workItem from="1601568178189" duration="6357000" />
+      <workItem from="1601568178189" duration="7095000" />
+      <workItem from="1601616994065" duration="6344000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1601543461276</created>
@@ -139,18 +156,38 @@
       <option name="project" value="LOCAL" />
       <updated>1601559812029</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="move calculator logic to helper. Add Unit-test.">
+      <created>1601578733854</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601578733854</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="add symfony/serializer package" />
     <MESSAGE value="add commission calculating command." />
     <MESSAGE value="add UnitTests package" />
-    <option name="LAST_COMMIT_MESSAGE" value="add UnitTests package" />
+    <MESSAGE value="move calculator logic to helper. Add Unit-test." />
+    <option name="LAST_COMMIT_MESSAGE" value="move calculator logic to helper. Add Unit-test." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1090" y="579" key="#Composer" timestamp="1601542734332">
@@ -165,10 +202,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="829" y="139" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601543734262" />
-    <state x="1010" y="455" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601573110611">
+    <state x="1010" y="455" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601618994768">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1010" y="455" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601573110611" />
+    <state x="1010" y="455" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601618994768" />
     <state x="1099" y="473" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1601560471784">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -177,22 +214,30 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1099" y="390" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601560539338" />
-    <state x="905" y="268" width="749" height="1058" key="CommitChangelistDialog2" timestamp="1601559811392">
+    <state x="905" y="268" width="749" height="1058" key="CommitChangelistDialog2" timestamp="1601623200982">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="905" y="268" width="749" height="1058" key="CommitChangelistDialog2/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601559811392" />
+    <state x="905" y="268" width="749" height="1058" key="CommitChangelistDialog2/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601623200982" />
     <state x="1060" y="441" key="FileChooserDialogImpl" timestamp="1601543234721">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1060" y="441" key="FileChooserDialogImpl/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601543234721" />
-    <state x="1065" y="423" key="NewPhpClassDialog" timestamp="1601572978801">
+    <state x="1065" y="423" key="NewPhpClassDialog" timestamp="1601618960184">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1065" y="423" key="NewPhpClassDialog/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601572978801" />
+    <state x="1065" y="423" key="NewPhpClassDialog/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601618960184" />
     <state x="1082" y="402" key="RollbackChangesDialog" timestamp="1601571432182">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1082" y="402" key="RollbackChangesDialog/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601571432182" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1601578738290">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601578738290" />
+    <state x="1123" y="461" key="refactoring.ChangeSignatureDialog" timestamp="1601619100556">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1123" y="461" key="refactoring.ChangeSignatureDialog/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601619100556" />
     <state x="936" y="330" key="run.anything.popup" timestamp="1601560987539">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
