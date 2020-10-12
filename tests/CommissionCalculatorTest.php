@@ -6,9 +6,8 @@ use App\Helper\CommissionCalculatorHelper;
 use App\Helper\DataReceiverHelper;
 use PHPUnit\Framework\MockObject\MockObject;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\SerializerInterface;
 
 class CommissionCalculatorTest extends KernelTestCase
 {
@@ -17,7 +16,7 @@ class CommissionCalculatorTest extends KernelTestCase
      */
     private $serializer;
 
-    public function __construct( $name = null, array $data = [], $dataName = '')
+    public function __construct($name = null, array $data = [], $dataName = '')
     {
         parent::__construct($name, $data, $dataName);
 
@@ -25,9 +24,7 @@ class CommissionCalculatorTest extends KernelTestCase
     protected function setUp()
     {
         static::bootKernel();
-        $encoders = [new JsonEncoder()];
-        $normalizers = [new ObjectNormalizer()];
-        $this->serializer = new Serializer($normalizers, $encoders);
+        $this->serializer = self::$container->get(SerializerInterface::class);
     }
 
     public function testCommissionCalculation(){

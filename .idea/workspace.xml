@@ -19,11 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb1cec66-9fef-469c-9d56-d77831acc7f9" name="Default Changelist" comment="create DataReceiver service for data downloading. Fix Test.">
+    <list default="true" id="cb1cec66-9fef-469c-9d56-d77831acc7f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Command/CommissionCalculatorCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/CommissionCalculatorCommand.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Helper/DataReceiverHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/DataReceiverHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/CommissionCalculatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CommissionCalculatorTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +130,7 @@
       <workItem from="1602005223190" duration="448000" />
       <workItem from="1602147598737" duration="622000" />
       <workItem from="1602227321824" duration="777000" />
-      <workItem from="1602497809702" duration="745000" />
+      <workItem from="1602497809702" duration="2089000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1601543461276</created>
@@ -174,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601623719310</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Move parameters to service arguments for DataReceiver.">
+      <created>1602498836438</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602498836438</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +206,8 @@
     <MESSAGE value="add UnitTests package" />
     <MESSAGE value="move calculator logic to helper. Add Unit-test." />
     <MESSAGE value="create DataReceiver service for data downloading. Fix Test." />
-    <option name="LAST_COMMIT_MESSAGE" value="create DataReceiver service for data downloading. Fix Test." />
+    <MESSAGE value="Move parameters to service arguments for DataReceiver." />
+    <option name="LAST_COMMIT_MESSAGE" value="Move parameters to service arguments for DataReceiver." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1090" y="579" key="#Composer" timestamp="1601542734332">
@@ -226,10 +234,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1099" y="390" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601560539338" />
-    <state x="905" y="268" width="1264" height="1068" key="CommitChangelistDialog2" timestamp="1602498141870">
+    <state x="905" y="268" width="1264" height="1068" key="CommitChangelistDialog2" timestamp="1602498835634">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="905" y="268" width="1264" height="1068" key="CommitChangelistDialog2/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602498141870" />
+    <state x="905" y="268" width="1264" height="1068" key="CommitChangelistDialog2/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602498835634" />
     <state x="1060" y="441" key="FileChooserDialogImpl" timestamp="1601543234721">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

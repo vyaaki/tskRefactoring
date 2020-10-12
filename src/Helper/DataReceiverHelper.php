@@ -5,10 +5,8 @@ namespace App\Helper;
 
 
 use App\Model\Transaction;
-use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\SerializerInterface;
 
 class DataReceiverHelper
 {
@@ -21,13 +19,8 @@ class DataReceiverHelper
     private $binUrl;
     private $rateUrl;
 
-    public function __construct($binUrl, $rateUrl)
+    public function __construct($binUrl, $rateUrl, SerializerInterface $serializer)
     {
-
-        $encoders = [new JsonEncoder()];
-        $normalizers = [new ObjectNormalizer()];
-
-        $serializer = new Serializer($normalizers, $encoders);
         $this->serializer = $serializer;
         $this->binUrl = $binUrl;
         $this->rateUrl = $rateUrl;

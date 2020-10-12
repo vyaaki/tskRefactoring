@@ -10,18 +10,10 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Symfony\Component\DependencyInjection\Container;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\Serializer;
 
 class CommissionCalculatorCommand extends Command
 {
     protected static $defaultName = 'task:commission:calculate';
-    /**
-     * @var Serializer
-     */
-    private $serializer;
 
     /**
      * @var CommissionCalculatorHelper
@@ -43,10 +35,6 @@ class CommissionCalculatorCommand extends Command
 
         $this->commissionCalculatorHelper = $commissionCalculatorHelper;
 
-        $encoders = [new JsonEncoder()];
-        $normalizers = [new ObjectNormalizer()];
-
-        $this->serializer = new Serializer($normalizers, $encoders);
         $this->dataReceiver = $dataReceiverHelper;
         parent::__construct($name);
 
