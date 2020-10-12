@@ -19,12 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb1cec66-9fef-469c-9d56-d77831acc7f9" name="Default Changelist" comment="move calculator logic to helper. Add Unit-test.">
-      <change afterPath="$PROJECT_DIR$/src/Helper/DataReceiverHelper.php" afterDir="false" />
+    <list default="true" id="cb1cec66-9fef-469c-9d56-d77831acc7f9" name="Default Changelist" comment="create DataReceiver service for data downloading. Fix Test.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Command/CommissionCalculatorCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/CommissionCalculatorCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helper/CommissionCalculatorHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/CommissionCalculatorHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/CommissionCalculatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CommissionCalculatorTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Helper/DataReceiverHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/DataReceiverHelper.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +108,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -126,7 +126,11 @@
       <updated>1601542712253</updated>
       <workItem from="1601542713360" duration="18372000" />
       <workItem from="1601568178189" duration="7095000" />
-      <workItem from="1601616994065" duration="6344000" />
+      <workItem from="1601616994065" duration="7425000" />
+      <workItem from="1602005223190" duration="448000" />
+      <workItem from="1602147598737" duration="622000" />
+      <workItem from="1602227321824" duration="777000" />
+      <workItem from="1602497809702" duration="745000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1601543461276</created>
@@ -163,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601578733854</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="create DataReceiver service for data downloading. Fix Test.">
+      <created>1601623719310</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1601623719310</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +198,8 @@
     <MESSAGE value="add commission calculating command." />
     <MESSAGE value="add UnitTests package" />
     <MESSAGE value="move calculator logic to helper. Add Unit-test." />
-    <option name="LAST_COMMIT_MESSAGE" value="move calculator logic to helper. Add Unit-test." />
+    <MESSAGE value="create DataReceiver service for data downloading. Fix Test." />
+    <option name="LAST_COMMIT_MESSAGE" value="create DataReceiver service for data downloading. Fix Test." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1090" y="579" key="#Composer" timestamp="1601542734332">
@@ -214,10 +226,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1099" y="390" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601560539338" />
-    <state x="905" y="268" width="749" height="1058" key="CommitChangelistDialog2" timestamp="1601623200982">
+    <state x="905" y="268" width="1264" height="1068" key="CommitChangelistDialog2" timestamp="1602498141870">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="905" y="268" width="749" height="1058" key="CommitChangelistDialog2/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601623200982" />
+    <state x="905" y="268" width="1264" height="1068" key="CommitChangelistDialog2/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602498141870" />
     <state x="1060" y="441" key="FileChooserDialogImpl" timestamp="1601543234721">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -230,10 +242,22 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1082" y="402" key="RollbackChangesDialog/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601571432182" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1601578738290">
+    <state x="-1459" y="325" key="SettingsEditor" timestamp="1602228099267">
+      <screen x="-1920" y="160" width="1920" height="1040" />
+    </state>
+    <state x="-1459" y="325" key="SettingsEditor/0.0.2560.1400/-1920.160.1920.1040@-1920.160.1920.1040" timestamp="1602228099267" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1602498194810">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601578738290" />
+    <state width="498" height="446" key="SwitcherDM/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602498194810" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1601623721862">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1601623721862" />
+    <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602498192296">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602498192296" />
     <state x="1123" y="461" key="refactoring.ChangeSignatureDialog" timestamp="1601619100556">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
